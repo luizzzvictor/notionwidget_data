@@ -42,4 +42,17 @@
   </div>
 
   <script>
-    const hoje = new Date
+    const hoje = new Date();
+    const opcoes = {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    };
+    const dataFormatada = hoje.toLocaleDateString('pt-BR', opcoes);
+    // Capitaliza a primeira letra do dia, ex.: "Quinta-feira"
+    const dataCapitalizada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
+    document.getElementById('data-hoje').innerText = dataCapitalizada;
+  </script>
+</body>
+</html>
